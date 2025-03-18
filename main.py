@@ -19,7 +19,7 @@ app.include_router(pdfs.router)  #Paulo Roberto Moniz   - Inibir até ter arquiv
 
 origins = [
     "http://localhost:3000",
-    "https://todo-frontend-khaki.vercel.app/",
+    "https://001-frontend-rosy.vercel.app/",
 ]
 
 # CORS configuration, needed for frontend development
