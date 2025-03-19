@@ -18,7 +18,7 @@ load_dotenv()
 SQLALCHEMY_DATABASE_URL = f"postgresql://basepdfs_4srh_user:FTabMoWIG6cSiSf99m1jt30jp3pZLcYL@dpg-cvcnv0l2ng1s7390lpc0-a/basepdfs_4srh"
 
                                          
-print("%%%%%%%% SQLALCHEMY_DATABASE_URL %%%%%%%%% ==========> ", SQLALCHEMY_DATABASE_URL)
+print("%%%%%%%% SQLALCHEMY_DATABASE_URL NO DATABASE.PY %%%%%%%%% ==========> ", SQLALCHEMY_DATABASE_URL)
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL
