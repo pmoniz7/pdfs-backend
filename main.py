@@ -7,20 +7,20 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 # routers: comment out next line till create them
-from routers import pdfs          #Paulo Roberto Moniz   - Inibir até ter o arquivo router - #
+from routers import pdfs
 
 import config
 
 app = FastAPI()
 
 # router: comment out next line till create it
-app.include_router(pdfs.router)  #Paulo Roberto Moniz   - Inibir até ter arquivo  router - # 
+app.include_router(pdfs.router)
 
 
-origins = [
-    "http://localhost:3000",
-    "001-frontend-inky.vercel.app/",
-]
+#origins = [
+#    "http://localhost:3000",
+#    "https://todo-frontend-khaki.vercel.app/",
+#]
 
 # CORS configuration, needed for frontend development
 app.add_middleware(

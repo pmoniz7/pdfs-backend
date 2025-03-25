@@ -69,7 +69,7 @@ def delete_pdf(id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="PDF not found")
     return {"message": "PDF successfully deleted"}
 
-
+print ("%%%% ÁREA LANGCHAIN #####")
 # LANGCHAIN
 langchain_llm = OpenAI(temperature=0)
 
@@ -93,7 +93,7 @@ async def summarize_text(text: str):
     summary = summarize_chain.run(text=text)
     return {'summary': summary}
 
-
+print ("%%%%% INÍCIO Ask a question about one PDF file %%%%%")
 # Ask a question about one PDF file
 @router.post("/qa-pdf/{id}")
 def qa_pdf_by_id(id: int, question_request: QuestionRequest,db: Session = Depends(get_db)):
@@ -111,3 +111,5 @@ def qa_pdf_by_id(id: int, question_request: QuestionRequest,db: Session = Depend
     question = question_request.question
     answer = QA_chain.run(question)
     return answer
+
+print ("%%%%% FIM Ask a question about one PDF file %%%%%")
